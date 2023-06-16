@@ -1,98 +1,88 @@
+/* Add this CSS at the beginning to reset default styles */
 * {
-    padding: 0;
-    margin: 0;
-    font-family: sans-serif;
-}
-
-.container {
-    width: 100%;
-    min-height: 100vh;
-    /* background-image:linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)); */
-
-}
-
-.navbar {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0px;
-    position: relative;
-    z-index: 1;
-}
-
-.navbar ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-}
-
-.navbar ul li {
-    list-style: none;
-}
-
-.navbar ul :hover{
-    background-color:#5d88d5;
-}
-
-.navbar ul a {
-    padding: 10px 18px;
-    border-radius: 8px;
-    font-family: sans-serif;
+    box-sizing: border-box;
+  }
+  
+  /* Add a responsive font size to the root element */
+  html {
     font-size: 16px;
-    color: #fff;
-    text-decoration: none;
-}
-    .navbar h1{
-       font-size: 35px;
-       font-weight: 500;
-       text-transform: uppercase; 
-       margin-top: 40px;
-    }
-
-h1 {
-    color: aliceblue;
-}
-
-h2 {
-    color: aliceblue;
-}
-
-body {
-    background-image: url(medium.jpg);
+  }
+  
+  body {
+    background-image: url(assets/medium.jpg);
     background-size: cover;
     background-repeat: inherit;
     width:100%;
     height: 100vh;
 }
-
-.content{
-    width: 100%;
-    min-height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
+  /* Update the container styles */
+  .container {
+    max-width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+  
+  /* Update the navbar styles */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    color: aliceblue;
+  }
+  
+  .navbar ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    margin-top: 10px;
+  }
+  
+  .navbar ul :hover{
+    background-color:#5d88d5;
 }
 
-.content h2{
-    font-size: 45px;
+  .navbar ul li {
+    list-style: none;
+  }
+  
+  .navbar ul a {
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* Update the content styles */
+  .content {
+    display: flex;
+    justify-content: center;
     color: aliceblue;
-    font-weight: 400;
-}
-.content2 h2{
-    padding-left: 40%;
-    padding-top: 20%;
-    padding-bottom: 5%;
-    font-size: 50px;
-}
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .content h2 {
+    font-size: 2.5rem;
 
-.content2 h2:hover{
-    color: aquamarine;
+  }
+  
+  /* Update the About section styles */
+  .About-content {
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .content2 h2 {
+    padding: 0;
+    color: aliceblue;
+  }
+  
+  .content2 h2:hover{
+    color: aqua;
     cursor: pointer;
 }
 
@@ -106,12 +96,18 @@ body {
     animation-fill-mode: forwards;
     color: aliceblue;
     padding-left: 20%;
-    font-size: 25px;
+    font-size: x;
     line-height: 2.0;
 }
 
 
-@keyframes typing {
+  .typed {
+    padding: 0;
+    color: aliceblue;
+  }
+  
+
+  @keyframes typing {
     from {
         width: 0
     }
@@ -122,54 +118,143 @@ body {
 }
 
 
-.inspiration{
+
+  .inspiration {
+    padding: 40px;
+    text-align: center;
     color: aliceblue;
-    font-size: 25px;
-    padding-top: 20%;
     background-color: black;
+  }
+  
+  .inspiration h2 {
+    padding: 0;
+    color: aliceblue;
+  }
 
-}
-
-.inspiration h2{
-    padding-left: 40%;
-    font-size: 45px;
-    line-height: 2.0;
-   
-}
-
-.inspiration h2:hover{
-    color: aquamarine;
+  .inspiration h2:hover{
+    color: aqua;
     cursor: pointer;
 }
-.inspiration p{
-    padding-left: 20%;
-
-}
-
-.github a {
-    color: aliceblue;
-    text-decoration: none; /* Remove underlines from the links */
-    display: grid;
-    margin-right: 10px;
-    padding-left: 40%;
-    padding-top: 20px;
-    
-}
-
-.linkedin{
-    display:grid ;
-    padding-left: 40%;
   
-    padding-top: 2%;
-}
+  .inspiration p {
+    padding: 0;
+  }
+  
+  .members {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: aqua;
+    background-color: black;
+  }
+  
+  .members h3 {
+    padding: 0;
+  }
+  
+  .members a {
+    padding: 5px 0;
+  }
+  
+  .linkedin {
+    padding-top: 20px;
+  }
 
-h3{
-    color: aquamarine;
-    font-size: 40px;
-    padding-left: 40%;
-    padding-top: 10%;
-}
+  nav .fas{
 
-.linkedin a {
-    color: rgb(132, 132, 235);
-}
+    display: none;
+  }
+  
+  /* Media Queries for responsiveness */
+  @media screen and (max-width: 768px) {
+
+
+    nav .fas{
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    nav ul{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+        background-color: transparent;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        flex-direction: column;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+  
+    /* .navbar ul {
+      background: blue;
+      position: fixed; 
+      top: 0;
+      flex-direction: column;
+      margin-top: 20px;
+    } */
+  
+    /* .navbar ul a {
+      margin: 10px 0;
+      padding: 8px 18px;
+    } */
+  
+    .content h2 {
+      font-size: 2rem;
+    }
+  
+    .content2 h2 {
+      padding: 0 20px;
+      font-size: 2.5rem;
+    }
+  
+    .typed {
+      padding: 0 20px;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+  
+    .inspiration h2 {
+      padding: 0 20px;
+      font-size: 2rem;
+    }
+  
+    .inspiration p {
+      padding: 0 20px;
+      font-size: 1rem;
+    }
+  
+    .members h3 {
+      padding: 0 20px;
+      font-size: 2rem;
+    }
+  
+    .members a {
+      padding: 2px 0;
+    }
+  
+    .linkedin {
+      padding-top: 10px;
+    
+    }
+  }
+  
+
+
+
+
+
